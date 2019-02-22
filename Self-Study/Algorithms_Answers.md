@@ -14,3 +14,14 @@ For the third line of code, it helps me to actually see what is happening as the
 
 For example:
 n=1, loop runs once; n=2, loop runs twice...etc. This is showing itself to be a linear complexity, O(N), giving the entire snippet a time complexity of O(N).
+
+b) This snippet has six blocks of code that will determine runtime complexity:
+
+sum = 0
+for i in range(n): i += 1
+for j in range(i + 1, n): j += 1
+for k in range(j + 1, n): k += 1
+for l in range(k + 1, 10 + k): l += 1
+sum += 1
+
+The first and the last blocks of code will run exactly once, meaning their complexity is O(1). The other blocks of code are increasing as the input increases, which means that they are linear - O(N). Because we are dealing with nested iterations over the data set, together they become O(N^4).
