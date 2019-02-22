@@ -27,3 +27,13 @@ sum += 1
 The first and the last blocks of code will run exactly once, meaning their complexity is O(1). The other blocks of code are increasing as the input increases, which means that they are linear - O(N). Because we are dealing with nested iterations over the data set, together they become O(N^4).
 
 c) This is a recursive function. The base case is bunnies == 0, so we look at time complexity as we move towards the base case. The number of bunnies decreases every time the function loops, which would indicate to me that there is a linear complexity of O(N).
+
+Exercise II -
+
+This seems like it would best be solved with a binary search function.
+
+I can start in the middle of the building (n / 2), checking on the egg (broken or not). If it doesn't break, the minimum is in the building above me. If it does break, the minimum is in the building below me.
+
+I can take that half of the building and perform the same action, cutting the floors in half and in half again until I have narrowed the results down to one floor, which will be the maximum safe dropping distance.
+
+Binary search functions have a time complexity of O(N log N), because the search function is only touching a certain number of the elements.
