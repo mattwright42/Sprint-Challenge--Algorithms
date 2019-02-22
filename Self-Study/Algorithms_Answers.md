@@ -25,3 +25,5 @@ for l in range(k + 1, 10 + k): l += 1
 sum += 1
 
 The first and the last blocks of code will run exactly once, meaning their complexity is O(1). The other blocks of code are increasing as the input increases, which means that they are linear - O(N). Because we are dealing with nested iterations over the data set, together they become O(N^4).
+
+c) This is a recursive function. The base case is bunnies == 0, so we look at time complexity as we move towards the base case. The number of bunnies decreases every time the function loops, which would indicate to me that there is a linear complexity of O(N).
